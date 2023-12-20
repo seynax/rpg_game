@@ -57,9 +57,9 @@ def add():
    else:
       return flask.render_template('add.html')
 
-@app.route('/area', methods=['GET', 'POST'])
-def area():
-   return flask.render_template('area.html')
+@app.route('/Area', methods=['GET', 'POST'])
+def Area():
+   return flask.render_template('Area.html')
 
 @app.route('/delete/<player_id>')
 def delete(player_id):
