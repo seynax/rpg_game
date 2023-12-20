@@ -12,7 +12,7 @@ def home():
 
     players_stats_list = []
 
-    logs_file = open("logs.txt", "w+")
+    logs_file = open("logs.log", "w+")
     for player_stat in players_stats:
       logs_file.write(str(player_stat) + "\n")
       players_stats_list.append({
@@ -41,7 +41,7 @@ def add():
       parameters["regeneration_speed"] = flask.request.values.get('regeneration_speed')
       parameters["level"]              = flask.request.values.get('level')
 
-      logs_file = open("logs.txt", "w+")
+      logs_file = open("logs.log", "w+")
       logs_file.write(str(parameters) + "\n")
       logs_file.close()
 

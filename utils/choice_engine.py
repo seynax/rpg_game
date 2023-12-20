@@ -60,9 +60,9 @@ class Results:
 
 class Choices:
     def __init__(self, choices=None):
-        self.choices = choices
-
-
+        self.choices    = []
+        append_various_data(self.results, choices)
+        self.results    = Results()
 
 def make_choice(condition=None, message=None, execution=None, exit=False, state=-1):
     choice = {}
