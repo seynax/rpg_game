@@ -57,7 +57,7 @@ def add():
    else:
       return flask.render_template('add.html')
 
-@app.route('/Area', methods=['GET', 'POST'])
+@app.route('/Area')
 def Area():
    return flask.render_template('Area.html')
 
