@@ -57,6 +57,10 @@ def add():
    else:
       return flask.render_template('add.html')
 
+@app.route('/area', methods=['GET', 'POST'])
+def area():
+   return flask.render_template('area.html')
+
 @app.route('/delete/<player_id>')
 def delete(player_id):
    connection = sqlite3.connect('../resources/SQLITE/rpg_game.db')
