@@ -31,6 +31,34 @@ class GameDatabase:
             "area_other_id INTEGER PRIMARY KEY"
         ])
 
+        self.database   .make_table("entities", [
+            "entity_id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE",
+            "entity_name TEXT UNIQUE",
+            "entity_zone_active INTEGER NOT NULL",
+            "entity_attack FLOAT NOT NULL DEFAULT 0",
+            "entity_attack_speed FLOAT NOT NULL DEFAULT 0",
+            "entity_defense FLOAT NOT NULL DEFAULT 0",
+            "entity_life FLOAT NOT NULL DEFAULT 0",
+            "entity_regeneration_speed FLOAT NOT NULL DEFAULT 0",
+            "entity_level FLOAT NOT NULL DEFAULT 0",
+            "entity_come_probability FLOAT NOT NULL DEFAULT 0"            
+        ])
+
+    def add_entity(self, area, entity_type):
+        current_zone_id = self.database   .select("area_id", "areas where area_name = '" + area.name + "'")[0][0]
+        self.database   .insert("entities",
+            [entity_type.name,
+            current_zone_id,
+            entity_type.attributes.get("attack"),
+            entity_type.attributes.get("attack_speed"),
+            entity_type.attributes.get("attack"),
+            entity_type.attributes.get("attack"),
+            entity_type.attributes.get("attack"),
+            entity_type.attributes.get("attack"),
+            entity_type.attributes.get("attack"),
+            entity_type.attributes.get("attack"),])
+
+
     def add_area(self, area):
         self.database   .insert("areas", [area.name, area.max_entities_count])
         current_zone_id = self.database   .select("area_id", "areas where area_name = '" + area.name + "'")[0][0]
