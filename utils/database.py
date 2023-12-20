@@ -35,7 +35,7 @@ class Database:
         request += ")"
         self.request(request, parameters)
 
-    def insert(self, table, parameters=None, or_ignore=True):
+    def insert(self, table, parameters=None, or_ignore=True, include_primary_key=False):
         request_str = "INSERT "
         if or_ignore:
             request_str += "OR IGNORE "
@@ -45,7 +45,7 @@ class Database:
         i = 0
         values = "VALUES ("
         for column_info in table_info:
-            if not column_info[5]:
+            if not column_info[5] or include_primary_key:
                 if i > 0:
                     request_str += ", "
                     values += ", "
@@ -54,7 +54,6 @@ class Database:
                 i += 1
         values += ")"
         request_str += ") " + values
-        print("REQ : " + request_str)
 
         self.request(request_str, parameters)
 
@@ -65,7 +64,6 @@ class Database:
     def select_print(self, condition, table, parameters=None):
         selecteds = self.select(condition, table, parameters)
 
-        print((len(selecteds)))
         for selected in selecteds:
             print(str(selected))
 
