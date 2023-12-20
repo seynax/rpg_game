@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListeZoneGameRPG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-50 w-screen flex flex-col gap-4 justify-center py ">
+    <section class="px-8 md:px-32 mt-16 w-full flex flex-col gap-2">
+        <div class="flex justify-between items-center">
+            <h1 class="text-3xl text-teal-900 font-bold">
+                La liste des <span class="text-teal-500">Zones</span>
+            </h1>
+
+            <a href="/addZone" class="bg-teal-500 text-white py-2 px-4 rounded">Ajouter une Zone</a>
+        </div>
+
+        <div class="container mx-auto my-8">
+            <table class="min-w-full bg-white border border-teal-500">
+                <thead>
+                <tr class="bg-teal-500 text-white">
+                    <th class="py-2 px-4">Area Id</th>
+                    <th class="py-2 px-4">Nom</th>
+                    <th class="py-2 px-4">Entity Max Spawn</th>
+                    <th class="py-2 px-4">Zone Avant</th>
+                    <th class="py-2 px-4">Zone Après</th>
+                </tr>
+                </thead>
+                <tbody>
+            <!-- A remettre une fois que c'est bon
+                
+                {% for Zones in Zone_list %}
+                    <tr>
+                        
+                        <td class="border py-2 px-4 text-center">{{ Zones.zone_id }}</td>
+                        <td class="border py-2 px-4 text-center">{{ Zones.zone_name }}</td>
+                        <td class="border py-2 px-4 text-center">{{ Zones.area_max_entity_count }}</td>
+                        <td class="border py-2 px-4 text-center">{{ Zones.Previous }}</td>
+                            {%}
+                        <td class="border py-2 px-4 text-center">{{ Zones.next }}</td>
+                        <td class="border py-2 px-4 text-center">{{ Zones.player_life }}</td>
+                        <td class="border py-2 px-4 text-center">
+                            
+                            <a href="/delete/{{Zones.player_id}}">
+                                <button class="bg-red-500 text-white py-1 px-2 rounded w-full">Delete</button>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            -->    
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
