@@ -10,7 +10,7 @@ class Area:
         self.next_areas         = []
         self.previous_areas     = []
         self.entities           = []
-        self.max_entities_cont  = max_entities_count
+        self.max_entities_count = max_entities_count
         self.spawners           = []
 
     def add_entity(self, entity_type, count=1):
@@ -52,7 +52,7 @@ class Area:
                 return entity
 
         ## Entities spawn runtime
-        if len(self.entities) >= self.max_entities_cont:
+        if len(self.entities) >= self.max_entities_count:
             return
         for spawner in self.spawners:
             spawner.spawn(self)
@@ -93,8 +93,8 @@ class Game:
         self.entity_types.append(entity_type)
         return entity_type
 
-    def add_area(self, name, dangerousness, max_entity_count):
-        area = Area(name, dangerousness, max_entity_count)
+    def add_area(self, name, dangerousness, max_entities_count):
+        area = Area(name, dangerousness, max_entities_count)
         self.areas.append(area)
         return area
 
