@@ -1,12 +1,10 @@
 from game.game              import *
 from utils.choice_engine    import *
 from random                 import *
-from game.game_flask        import *
-from game.game_database     import *
+from game.game_api          import *
 
 game            = Game(player_entity_attributes=make_entity_attributes(25, 2, 8, 200, 4, 0))
-game_database   = GameDatabase("resources/SQLITE/rpg_game.db")
-game_database.add_player(game.player_entity)
+print_players()
 
 ## ENTITIES TYPES
 ##                                              name,               attack, attack_speed,   defense,    life,   regeneration_speed, come_probability
@@ -37,17 +35,9 @@ make_path(athena, paris)
 make_path(athena, rome)
 make_path(rome, hapilly_forest)
 
-for area in game.areas:
-    game_database.add_area(area)
-
-for area in game.areas:
-    game_database.resolve_area_paths(area)
-
-game_database.database.select_print("*", "areas")
-game_database.database.select_print("*", "areas_paths")
 input()
 
 ## FIRST AREA
-game.current_area   =   athena_area
+game.current_area   =   athena
 
 game.runtime() ## Launch game
