@@ -13,10 +13,10 @@
     > cd rpg_game_api/jeu
 
     - *AVEC MESSAGES DE DÉBOGAGE* :
-      > flask --app game_flask exécuter --debug
+      > flask --app game_flask run --debug
 
     - *SANS MESSAGES DE DÉBOGAGE* :
-      > flask --app game_flask exécuter
+      > flask --app game_flask run
 
   - Lancer la page web :
     -https://127.0.0.1:5000
