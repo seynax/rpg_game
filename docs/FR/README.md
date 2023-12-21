@@ -1,6 +1,6 @@
 # LISEZMOI
 
-- [English version | Version anglaise]([https://github.com/seynax/rpg_game/master/README.md](https://github.com/seynax/rpg_game?tab=readme-ov-file#readme))
+- [English version | Version anglaise](https://github.com/seynax/rpg_game?tab=readme-ov-file#readme)
 
 ## __Par quoi commencer ?__
 
