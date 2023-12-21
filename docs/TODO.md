@@ -1,45 +1,43 @@
 # TODO LIST
 
-## Base de données
+## Base de données et features
 
-| **NOM**                        | Initié ? |
-|--------------------------------|----------|
-| __Joueurs__                    | ✔️        |
-| __Zones__                      | ✔️        |
-| __Creatures__                  | 🚫       |
+| **NOM**                        | BDD  | API  | WEB  | GAME |
+|--------------------------------|------|------|------|------|
+| __Joueur__                     | ✔️    | 🛠️   | 🛠️   | ✔️    |
+| __Creatures ennemis__          | 🚫   | 🚫   | 🚫   | ✔️    |
+| __Creatures alliés__           | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Montures / compagnons__      | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Niveau et compétences__      | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Attaque spéciale__           | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Equipe__                     | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Zones__                      | ✔️    | 🛠️   | 🛠️   | ✔️    |
+| __Arenes et dongeons__         | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Boutiques__                  | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Objets et coffres__          | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Armes et outils__            | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Quètes__                     | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Dialogues__                  | 🚫   | 🚫   | 🚫   | 🚫   |
+| __Histoire__                   | 🚫   | 🚫   | 🚫   | 🚫   |
 
 ## API
 
-| **NOM**                        | **Ajouter**      | **Supprimer**   |  **Afficher tous**  | **Afficher un** |
-|--------------------------------|------------------|-----------------|---------------------|-----------------|
-| __Joueurs__ - site web back    | ✔️                | ✔️               | ✔️                   | /               |
-| __Joueurs__ - site web front   | ✔️                | ✔️               | ✔️                   | /               |
-| __Joueurs__ - api              | :no_entry_sign:  | ✔️               | ✔️                   | 🚫              |
-_______________________________________________________________________________________________________________
-| **NOM**                        | **Ajouter**      | **Supprimer**   |  **Afficher tous**  | **Afficher un** |
-|--------------------------------|------------------|-----------------|---------------------|-----------------|
-| __Zones__ - site web back      | :no_entry_sign:  | :no_entry_sign: | ✔️                   | 🛠️              |
-| __Zones__ - site web front     | :no_entry_sign:  | :no_entry_sign: | :no_entry_sign:     | 🛠️              |
-| __Zones__ - api                | :no_entry_sign:  | :no_entry_sign: | ✔️                   | :no_entry_sign: |
-_______________________________________________________________________________________________________________
-| **NOM**                        | **Ajouter**      | **Supprimer**   |  **Afficher tous**  | **Afficher un** |
-|--------------------------------|------------------|-----------------|---------------------|-----------------|
-| __Creatures__ - site web back  | :no_entry_sign:  | :no_entry_sign: | :no_entry_sign:     | :no_entry_sign: |
-| __Creatures__ - site web front | :no_entry_sign:  | :no_entry_sign: | :no_entry_sign:     | :no_entry_sign: |
-| __Creatures__ - api            | :no_entry_sign:  | :no_entry_sign: | :no_entry_sign:     | :no_entry_sign: |
+| **NOM**                        | **Ajouter un**   | **Ajouter plusieurs** | **Supprimer un** | **Supprimer plusieurs** | **Supprimer tous**  | **Afficher un**  | **Afficher plusieurs** | **Afficher tous** |
+|--------------------------------|------------------|-----------------------|------------------|-------------------------|---------------------|------------------|------------------------|-------------------|
+| __Joueurs__ - site web back    | ✔️                | ✔️                     | ✔️                | ✔️                       | 🚫                  | 🚫               | 🚫                     | ✔️                 |
+| __Joueurs__ - site web front   | ✔️                | ✔️                     | ✔️                | ✔️                       | 🚫                  | 🚫               | 🚫                     | ✔️                 |
+| __Joueurs__ - api              | ✔️                | ✔️                     | ✔️                | ✔️                       | 🚫                  | 🚫               | 🚫                     | ✔️                 |
 
-## FEATURES
+_______________________________________________________________________________________________________________
+| **NOM**                        | **Ajouter un**   | **Ajouter plusieurs** | **Supprimer un** | **Supprimer plusieurs** | **Supprimer tous**  | **Afficher un**  | **Afficher plusieurs** | **Afficher tous** |
+|--------------------------------|------------------|-----------------------|------------------|-------------------------|---------------------|------------------|------------------------|-------------------|
+| __Zones__ - site web back      | 🚫                | 🚫                   | ✔️                | 🚫                      | 🚫                  | 🚫               | 🚫                     | ✔️                 |
+| __Zones__ - site web front     | 🚫                | 🚫                   | 🚫               | 🚫                      | 🚫                  | 🚫               | 🚫                     | ⚒️                 |
+| __Zones__ - api                | 🚫                | 🚫                   | ✔️                | 🚫                      | 🚫                  | 🚫               | 🚫                     | ✔️                 |
 
-| **NOM**                        |          |
-|--------------------------------|----------|
-| __Joueur__                     | ✔️        |
-| __Creatures__                  | ✔️        |
-| __Zones__                      | 🛠️       |
-| __Creatures alliés__           | 🚫       |
-| __Boutiques__                  | 🚫       |
-| __Objets et coffres__          | 🚫       |
-| __Armes et outils__            | 🚫       |
-| __Niveau et compétences__      | 🚫       |
-| __Attaque spéciale__           | 🚫       |
-| __Montures / compagnons__      | 🚫       |
-| __Equipe__                     | 🚫       |
+_______________________________________________________________________________________________________________
+| **NOM**                        | **Ajouter un**   | **Ajouter plusieurs** | **Supprimer un** | **Supprimer plusieurs** | **Supprimer tous**  | **Afficher un**  | **Afficher plusieurs** | **Afficher tous** |
+|--------------------------------|------------------|-----------------------|------------------|-------------------------|---------------------|------------------|------------------------|-------------------|
+| __Creatures__ - site web back  | 🚫               | 🚫                    | 🚫               | 🚫                      | 🚫                  | 🚫               | 🚫                    | 🚫                |
+| __Creatures__ - site web front | 🚫               | 🚫                    | 🚫               | 🚫                      | 🚫                  | 🚫               | 🚫                    | 🚫                |
+| __Creatures__ - api            | 🚫               | 🚫                    | 🚫               | 🚫                      | 🚫                  | 🚫               | 🚫                    | 🚫                |
