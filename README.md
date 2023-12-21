@@ -26,6 +26,28 @@
    > cd rpg_game/
    > python3 main.py
 
+## __How work ?__
+- with __PYTHON Game__
+- with __WEB and API__
+  - HOME :
+    - https://127.0.0.1:5000
+    - https://127.0.0.1:5000/index
+
+  - PAGES :
+    - https://127.0.0.1:5000/page
+
+  - FORM and API REQUEST :
+    - https://127.0.0.1:5000/type/action
+    - https://127.0.0.1:5000/api/type/action
+
+    - __Types__ : area(s), player(s)
+    - __Actions__ :
+      - types               : show all
+      - types/delete : delete multiples
+      - type/delete   : delete one
+      - types/delete : delete multiples
+      - type/add        : add one
+
 ## __Repositories__ :
 
 - https://github.com/seynax/rpg_game
@@ -55,25 +77,3 @@
 - __Conventions__
   - Class : Name0Name1
   - Methods, file and variables : name0_name1
-
-## __How work ?__
-- with __PYTHON Game__
-- with __WEB and API__
-  - HOME :
-    - https://127.0.0.1:5000
-    - https://127.0.0.1:5000/index
-
-  - PAGES :
-    - https://127.0.0.1:5000/page
-
-  - FORM and API REQUEST :
-    - https://127.0.0.1:5000/type/action
-    - https://127.0.0.1:5000/api/type/action
-
-    - __Types__ : area(s), player(s)
-    - __Actions__ :
-      - types               : show all
-      - types/delete : delete multiples
-      - type/delete   : delete one
-      - types/delete : delete multiples
-      - type/add        : add one
