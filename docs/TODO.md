@@ -18,9 +18,9 @@
 _______________________________________________________________________________________________________________
 | **NOM**                        | **Ajouter**      | **Supprimer**   |  **Afficher tous**  | **Afficher un** |
 |--------------------------------|------------------|-----------------|---------------------|-----------------|
-| __Zones__ - site web back      | :no_entry_sign:  | :no_entry_sign: | :no_entry_sign:     | 🛠️              |
+| __Zones__ - site web back      | :no_entry_sign:  | :no_entry_sign: | ✔️                   | 🛠️              |
 | __Zones__ - site web front     | :no_entry_sign:  | :no_entry_sign: | :no_entry_sign:     | 🛠️              |
-| __Zones__ - api                | :no_entry_sign:  | :no_entry_sign: | :no_entry_sign:     | :no_entry_sign: |
+| __Zones__ - api                | :no_entry_sign:  | :no_entry_sign: | ✔️                   | :no_entry_sign: |
 _______________________________________________________________________________________________________________
 | **NOM**                        | **Ajouter**      | **Supprimer**   |  **Afficher tous**  | **Afficher un** |
 |--------------------------------|------------------|-----------------|---------------------|-----------------|
