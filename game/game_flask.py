@@ -71,3 +71,12 @@ def delete(player_id):
    connection.close()
 
    return flask.redirect('/')
+
+@app.route('/delete/<area_id>')
+def Zdelete(area_id):
+   connection = sqlite3.connect('../resources/SQLITE/rpg_game.db')
+   
+   cursor = connection.cursor()
+   cursor.execute('DELETE FROM areas WHERE area_id = ' + area_id)
+   connection.commit()
+   connection.close
