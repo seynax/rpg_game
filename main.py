@@ -1,12 +1,10 @@
 from game.game              import *
 from utils.choice_engine    import *
 from random                 import *
-from game.game_flask        import *
-from game.game_database     import *
+from game.game_api          import *
 
 game            = Game(player_entity_attributes=make_entity_attributes(25, 2, 8, 200, 4, 0))
-game_database   = GameDatabase("resources/SQLITE/rpg_game.db")
-game_database.add_player(game.player_entity)
+print_players()
 
 ## ENTITIES TYPES
 ##                                              name,               attack, attack_speed,   defense,    life,   regeneration_speed, come_probability
@@ -16,27 +14,30 @@ armed_civilian_type =   game.add_entity_type(   "Civil armée",      10,      1,
 
 ## AREAS
 ##                                      name,               dangerousness,  max_entity_count
-athena_area         =   game.add_area(  "Athène",           2,              10)
+athena              =   game.add_area(  "Athène",           2,              10)
 hapilly_forest      =   game.add_area(  "Hapilly Forest",   4,              10)
+rome                =   game.add_area(  "Rome",             2,              10)
+paris               =   game.add_area(  "Paris",             2,              10)
 
 ## AREA SPAWNERS
 ##  - IN ATHENA
-##                                  probability %,  min,    max,    entity type,            max count on spawner
-athena_area.spawners.append(Spawner(8,              1,      1,      spartan_type,           2))
-athena_area.spawners.append(Spawner(55,             1,      4,      armed_civilian_type,    8))
+##                             probability %,  min,    max,    entity type,            max count on spawner
+athena.spawners.append(Spawner(8,              1,      1,      spartan_type,           2))
+athena.spawners.append(Spawner(55,             1,      4,      armed_civilian_type,    8))
 
 ## AREA PATHS
-hapilly_forest.previous_areas   .append(athena_area)
-athena_area.next_areas          .append(hapilly_forest)
+def make_path(source, destination):
+    source.next_areas.append(destination)
+    destination.previous_areas.append(source)
 
-game_database.add_area(hapilly_forest)
-game_database.add_area(athena_area)
-game_database.database.select_print("*", "areas")
-game_database.database.select_print("*", "areas_next")
-game_database.database.select_print("*", "areas_previous")
+make_path(athena, hapilly_forest)
+make_path(athena, paris)
+make_path(athena, rome)
+make_path(rome, hapilly_forest)
+
 input()
 
 ## FIRST AREA
-game.current_area   =   athena_area
+game.current_area   =   athena
 
 game.runtime() ## Launch game
